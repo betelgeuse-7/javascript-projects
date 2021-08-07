@@ -1,0 +1,40 @@
+* {
+    font-family: "Courier New";
+}
+
+input {
+    width: 550px;
+    height: 50px;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #1f1c1c;
+}
+
+.key {
+    background-color: #c2002a;
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
+    padding-right: 25px;
+    margin: 1px;
+    cursor: pointer;
+    width: auto;
+    max-width: 40px;
+    border-radius: 4px;
+}
+
+.board {
+    width: auto;
+    max-width: 450px;
+    padding: 5px;
+}
+
+.special {
+    background-color: #e9390e;
+    color: #fff;
+    font-size: 20px;
+}
