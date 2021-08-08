@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="paint.js"></script>
+        <title>Little paint</title>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <div id="conf">
+            <label for="line-type">Line type: </label>
+            <select id="line-type">
+                <option value="butt">Butt</option>
+                <option value="round">Round</option>
+                <option value="square">Square</option>
+            </select>
+            <label for="boldness">Boldness: </label>
+            <input id="boldness" type="number" value="10" />
+            <label for="color">Color: </label>
+            <input type="color" id="color" />
+            <label for="bgcolor">Background color: </label>
+            <input type="color" id="bgcolor" value="#feffcc" />
+            <button id="clear-btn">Clear canvas</button>
+        </div>
+        <script></script>
+    </body>
+</html>
