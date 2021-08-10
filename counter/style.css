@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button,
+#counter {
+    font-size: 10vw;
+    cursor: pointer;
+    color: #fff;
+}
+
+#inc,
+#dec {
+    outline: none;
+    border: none;
+    width: 35vw;
+    height: 50vh;
+}
+
+#counter {
+    position: absolute;
+    right: 60vw;
+    border: 2px solid #fff;
+    width: 20vw;
+    height: 20vh;
+}
+
+#inc {
+    background-color: #10ce10;
+}
+
+#dec {
+    background-color: #ee4040;
+}
