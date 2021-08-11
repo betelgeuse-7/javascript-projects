@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Palette Mosaic", "Courier New";
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+#game {
+    width: 50vw;
+    height: 50vh;
+}
+
+#score {
+    background-color: #f8f8b2;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#event {
+    background-color: #c3ecc3;
+}
+
+#choice {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5acf5;
+}
+
+#choice,
+button {
+    cursor: pointer;
+}
+
+#history {
+    font-family: "Courier New";
+    font-weight: 700;
+    font-size: 15px;
+
+    position: absolute;
+    left: 60vw;
+    top: 6vh;
+
+    max-height: 65vh;
+    overflow: scroll;
+}
