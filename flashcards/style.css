@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#root {
+    width: 70vw;
+    height: 70vh;
+    background-color: #ffeddf;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#wrap {
+    width: 80%;
+    margin-top: 5%;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background-color: #4444ff;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+textarea {
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    border: 2px solid #4444ff;
+    border-radius: 5px;
+    resize: none;
+    font-size: 18px;
+    outline: none;
+}
+
+textarea:focus {
+    border: 3px solid #e786ff;
+}
+
+#list {
+    margin-top: 10%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#list button {
+    font-size: 14px;
+    padding: 3px;
+}
+
+.card {
+    background-color: #f8c0ef;
+    border-radius: 10px;
+    padding: 10px;
+    width: 45%;
+    padding: 15px;
+    margin: 5px;
+}
+
+.show-answer-btn {
+    margin-top: 5px;
+    background-color: inherit;
+    color: #6565ff;
+}
+
+.action-btn {
+    margin: 2px;
+}
+
+.delete {
+    background-color: #ffacac;
+    color: #ff0000;
+    margin-left: 3%;
+}
+
+#add-card-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#save-btn {
+    margin-top: 10px;
+    width: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+    #list {
+        display: block;
+        width: 120%;
+    }
+
+    .card {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+}

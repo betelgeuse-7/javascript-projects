@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script defer src="flashcards.js"></script>
+        <script defer src="dom.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>Flashcards</title>
+    </head>
+    <body>
+        <div id="root">
+            <div id="wrap">
+                <h1 class="title">Flashcards</h1>
+                <button id="add-card-btn">Add flashcard</button>
+                <div id="form">
+                    <div id="question-section">
+                        <h3 class="title">Question</h3>
+                        <textarea
+                            id="question-textarea"
+                            cols="30"
+                            rows="10"
+                        ></textarea>
+                    </div>
+                    <div id="answer-section">
+                        <h3 class="title">Answer</h3>
+                        <textarea
+                            id="answer-textarea"
+                            cols="30"
+                            rows="10"
+                        ></textarea>
+                    </div>
+                    <button id="save-btn">Save</button>
+                </div>
+
+                <div id="list">
+                    <!--
+                    <div class="card" data-key="Kamfkjaesogf">
+                        <p class="text">
+                            What is my name?Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Illum incidunt ea,
+                            magnam dicta placeat itaque, velit repellendus fuga
+                            officia neque assumenda ipsum totam voluptates
+                            molestias expedita adipisci. Rem, sapiente voluptas.
+                        </p>
+                        <button class="show-answer-btn">
+                            Show/hide answer
+                        </button>
+                        <div class="action-btns">
+                            <button class="action-btn delete">Delete</button>
+                        </div>
+                    </div>
+                --></div>
+            </div>
+        </div>
+    </body>
+</html>
