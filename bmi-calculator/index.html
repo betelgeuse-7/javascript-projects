@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <title>BMI Calculator</title>
+    </head>
+    <body>
+        <div
+            id="root"
+            x-data="
+            { height: '', weight: '', result: '', complete: false,
+            get calculateBmi() {
+                if (this.height && this.weight) {
+                    return this.weight / ((parseInt(this.height) / 100) * (parseInt(this.height) / 100))
+                }
+            },
+            get isHealthy() {
+                if (this.calculateBmi > 25 && this.calculateBmi < 18.5) return 'healthy'
+                return 'not healthy'
+            }
+        }
+        "
+        >
+            <div id="input">
+                <input
+                    type="number"
+                    id="height"
+                    placeholder="Your height (cm)"
+                    x-model="height"
+                />
+                <input
+                    type="number"
+                    id="weight"
+                    placeholder="Your weight (kg)"
+                    x-model="weight"
+                />
+                <button
+                    type="submit"
+                    id="calculate"
+                    @click="result = calculateBmi; complete=true, healthy=isHealthy"
+                >
+                    Calculate
+                </button>
+            </div>
+
+            <div
+                id="result"
+                x-text="'Your BMI is ' + result + '\nYou are ' + isHealthy"
+                x-show="complete"
+            ></div>
+        </div>
+    </body>
+</html>
