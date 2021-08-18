@@ -9,14 +9,28 @@ const LOCALSTORAGE_KEY = "flashcards"
 // localStorage
 class Store {
     save(flashcard) {
-        const oldData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY))
-        const newData = [...oldData, flashcard]
-        localStorage.setItem(LOCALSTORAGE_KEY, newData)
+        const oldData = this.getRaw()
+
+        if (oldData !== "") {
+            const newData = oldData + JSON.stringify(flashcard)
+            localStorage.setItem(LOCALSTORAGE_KEY, newData)
+        } else {
+            localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(flashcard))
+        }
     }
 
     getAll() {
-        const data = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY))
+        let data = ""
+        if (localStorage.getItem(LOCALSTORAGE_KEY))
+            data = Array.from(
+                JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY))
+            )
+
         return data
+    }
+
+    getRaw() {
+        return localStorage.getItem(LOCALSTORAGE_KEY)
     }
 
     delete(key) {}
@@ -31,10 +45,11 @@ class Flashcard {
         this.answer = answer
     }
 }
-
 const store = new Store()
 
 function reRenderList() {
+    console.log("rerender")
+    list.innerHTML = ""
     const flashcards = store.getAll()
     for (const card of flashcards) {
         const flashcard = FLASHCARD(card.key, card.question, card.answer)
@@ -47,6 +62,7 @@ saveBtn.addEventListener("click", () => {
         questionTextarea.value,
         answerTextarea.value
     )
-    // TODO save to localhost
-    // * JSON.stringify
+
+    store.save(newFlashcard)
+    reRenderList()
 })
