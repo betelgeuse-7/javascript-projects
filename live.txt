@@ -2,3 +2,4 @@ keyboard: https://js-virtual-keyboard.netlify.app/
 paint: https://js-paint.netlify.app/
 counter: counter-counter-counter.netlify.app
 rock, paper, scissors: https://js-rockps.netlify.app/
+guess the number: js-guess-the-number.netlify.app
