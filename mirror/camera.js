@@ -14,7 +14,7 @@ else record()
 cam.style.width = "100%"
 cam.style.height = "100%"
 
-async function record() {
+function record() {
     navigator.mediaDevices.getUserMedia({ video: true }).then(s => {
         window.CAMSTREAM = s
         cam.srcObject = s
